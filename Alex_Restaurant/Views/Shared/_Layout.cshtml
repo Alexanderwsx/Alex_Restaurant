@@ -10,8 +10,24 @@
 </head>
 <body>
    
-    <div class="container2">       
-            @RenderBody()       
+   
+    <div class="container2">
+        <header>
+            <img class="logo" src="/images/logo-transparent-png.png" alt="Logo for alex Restaurant">
+        </header>
+
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="Menu">Menu</a>
+            <a asp-controller="Home" asp-action="Contact">Contact</a>
+        </nav>
+
+            @RenderBody()
+
+        <footer>
+            <p>5444 Rue Jean-Talon E, Saint-Léonard, QC H1S 1L6 - Copyright 2023©</p>
+        </footer>
+
     </div>
 
    
