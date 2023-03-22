@@ -30,7 +30,6 @@ namespace Alex_Restaurant.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -39,6 +38,9 @@ namespace Alex_Restaurant.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 4)");
 
                     b.Property<int>("TypeMealId")
                         .HasColumnType("int");

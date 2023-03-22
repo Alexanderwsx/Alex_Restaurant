@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Alex_Restaurant.Migrations
 {
     [DbContext(typeof(Alex_RestaurantContext))]
-    [Migration("20230321075641_initial")]
+    [Migration("20230322085453_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -33,12 +33,17 @@ namespace Alex_Restaurant.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<int>("TypeMealId")
                         .HasColumnType("int");

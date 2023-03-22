@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Alex_Restaurant.Models.Meal>
+
+<div class="Menu">
+    <h2>Appetizer</h2>
+
+    <table>
+        @foreach (var item in Model)
+        {
+            if(item.TypeMeal.Name == "Appetizer"){
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="small-cell">
+                    @Html.DisplayFor(modelItem => item.Price) $
+                </td>             
+             
+            </tr>
+            }
+        }
+    </table>
+</div>

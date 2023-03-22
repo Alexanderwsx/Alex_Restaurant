@@ -62,7 +62,7 @@ namespace Alex_Restaurant.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,TypeMealId")] Meal meal, IFormFile? uploadedImage)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,TypeMealId,Price")] Meal meal, IFormFile? uploadedImage)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,7 @@ namespace Alex_Restaurant.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,TypeMealId")] Meal meal)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,TypeMealId,Price")] Meal meal)
         {
             if (id != meal.Id)
             {
@@ -183,6 +183,11 @@ namespace Alex_Restaurant.Controllers
         private bool MealExists(int id)
         {
           return (_context.Meal?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+        public async Task<IActionResult> Menu()
+        {
+            var alex_RestaurantContext = _context.Meal.Include(m => m.TypeMeal);
+            return View(await alex_RestaurantContext.ToListAsync());
         }
     }
 }

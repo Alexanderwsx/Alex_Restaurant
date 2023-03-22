@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Alex_Restaurant.Migrations
 {
     [DbContext(typeof(Alex_RestaurantContext))]
-    [Migration("20230321083309_ajouteImage2")]
-    partial class ajouteImage2
+    [Migration("20230322090201_prixToDecimal")]
+    partial class prixToDecimal
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,6 @@ namespace Alex_Restaurant.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -42,6 +41,9 @@ namespace Alex_Restaurant.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 4)");
 
                     b.Property<int>("TypeMealId")
                         .HasColumnType("int");

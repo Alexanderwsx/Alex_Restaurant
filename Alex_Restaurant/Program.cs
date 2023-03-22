@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Alex_Restaurant.Data;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Alex_RestaurantContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Alex_RestaurantContext") ?? throw new InvalidOperationException("Connection string 'Alex_RestaurantContext' not found.")));
@@ -9,6 +11,17 @@ builder.Services.AddDbContext<Alex_RestaurantContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+var supportedCultures = new[]
+   {
+        new CultureInfo("en-US")
+    };
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("en-US"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
