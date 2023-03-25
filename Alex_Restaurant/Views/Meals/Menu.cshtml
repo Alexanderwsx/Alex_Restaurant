@@ -6,16 +6,77 @@
     <table>
         @foreach (var item in Model)
         {
-            if(item.TypeMeal.Name == "Appetizer"){
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td class="small-cell">
-                    @Html.DisplayFor(modelItem => item.Price) $
-                </td>             
-             
-            </tr>
+            if (item.TypeMeal.Name == "Appetizer")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="small-cell">
+                        @Html.DisplayFor(modelItem => item.Price) $
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+    <br />
+    <h2>Drinks</h2>
+  
+    <table>
+        @foreach (var item in Model)
+        {
+            if (item.TypeMeal.Name == "Drinks")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="small-cell">
+                        @Html.DisplayFor(modelItem => item.Price) $
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+    <br />
+    <h2>Main Course</h2>
+
+    <table>
+        @foreach (var item in Model)
+        {
+            if (item.TypeMeal.Name == "Main course")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="small-cell">
+                        @Html.DisplayFor(modelItem => item.Price) $
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+    <br />
+    <h2>Desserts</h2>
+
+    <table>
+        @foreach (var item in Model)
+        {
+            if (item.TypeMeal.Name == "Desserts")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="small-cell">
+                        @Html.DisplayFor(modelItem => item.Price) $
+                    </td>
+
+                </tr>
             }
         }
     </table>

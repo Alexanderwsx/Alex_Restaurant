@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="~/Alex_Restaurant.styles.css" asp-append-version="true" />
 </head>
 <body>
-   
-   
+
+
     <div class="container2">
         <header>
             <img class="logo" src="/images/logo-transparent-png.png" alt="Logo for alex Restaurant">
@@ -21,8 +21,10 @@
             <a asp-controller="Meals" asp-action="Menu">Menu</a>
             <a asp-controller="Home" asp-action="Contact">Contact</a>
         </nav>
-
+        <div>
             @RenderBody()
+        </div>
+
 
         <footer>
             <p>5444 Rue Jean-Talon E, Saint-Léonard, QC H1S 1L6 - Copyright 2023©</p>
@@ -30,10 +32,11 @@
 
     </div>
 
-   
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
