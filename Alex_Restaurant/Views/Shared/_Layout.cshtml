@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
 </head>
-<body>
+<body class="d-flex flex-column">
 
 
     <div class="container">
@@ -21,19 +21,19 @@
             <a asp-controller="Meals" asp-action="Menu">Menu</a>
             <a asp-controller="Home" asp-action="Contact">Contact</a>
         </nav>
-        <div>
-            @RenderBody()
 
-        </div>
+        @RenderBody()
 
-        <footer class="position-absolute bottom-0 end-0">
-            <p>5444 Rue Jean-Talon E, Saint-Léonard, QC H1S 1L6 - Copyright 2023©</p>
-        </footer>
+
+
+
 
 
 
     </div>
-
+    <footer class="position-relative bottom-0 end-0 flex-shrink-0 mt-auto">
+        <p>5444 Rue Jean-Talon E, Saint-Léonard, QC H1S 1L6 - Copyright 2023©</p>
+    </footer>
 
 
 
