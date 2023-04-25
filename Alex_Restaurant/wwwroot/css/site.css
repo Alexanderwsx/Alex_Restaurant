@@ -1,10 +1,8 @@
 
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
+html, body {
+    height: 100%;
+    margin: 0;
 }
-
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -16,15 +14,9 @@ body {
     background-image: url(/images/background-adare-restaurant.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height:100%;
 }
 
-
-
-.container2 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-}
 
 header {
     margin-top: 10px;
@@ -39,101 +31,110 @@ nav {
     padding-top: 14px;
     padding-bottom: 14px;
 }
+@media(min-width: 992px) {
+    
 
-main {
-    height: 340px;
-    text-align: center;
-    padding-top: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-bottom: 30px;
+    .description {      
+        padding-left: 300px;
+        padding-right: 300px;
+    }
 }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.721);
-    padding-top: 20px;
-    padding-bottom: 5px;
-    position: relative;
-    width: 100%;
-}
-
-    footer p {
-        font-size: 12px;
-        text-align: center;
+    footer {
+        background-color: rgba(0, 0, 0, 0.721);
+        padding-top: 20px;
+        padding-bottom: 5px;
+        width: 100%;
     }
 
-h1, h2, h3, h4, h5 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        footer p {
+            font-size: 12px;
+            text-align: center;
+        }
 
-p {
-    font-size: 18px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    h1, h2, h3, h4, h5 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-a {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    /*     text-decoration: none;
+    p {
+        font-size: 18px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        /*     text-decoration: none;
  */
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+
+
+
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 75%;
+        width: 100%;
+        position: absolute;
+    }
+ 
 
-.contact {
-    margin-left: 60px;
-    height: 300px;
-    width: 200px;
-    text-align: left;
-}
 
-.logo {
-    height: 60px;
-    width: 60px;
-}
+    .logo {
+        height: 60px;
+        width: 60px;
+    }
 
-.cards {
-    min-height: 300px;
-    min-width: 650px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
 
-.Menu {
-    height: 380px;
-    padding-top: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-bottom: 30px;
-    flex-grow: 1;
-    overflow: auto;
-}
+    .Menu {
+        height: 380px;
+        padding-top: 50px;
+        padding-left: 200px;
+        padding-right: 200px;
+        margin-bottom: 30px;
+        flex-grow: 1;
+        overflow: auto;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-th, td {
-    border-top: 1px solid white;
-    padding: 8px;
-    text-align: left;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    th, td {
+        border-top: 1px solid white;
+        padding: 8px;
+        text-align: left;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-.small-cell {
-    width: 20%;
-    text-align: right;
-}
+    .small-cell {
+        width: 20%;
+        text-align: right;
+    }
 
-label.control-label {
-    color: whitesmoke;}
+    label.control-label {
+        color: whitesmoke;
+    }
+
+ 

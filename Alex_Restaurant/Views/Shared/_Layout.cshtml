@@ -6,12 +6,12 @@
     <title>@ViewData["Title"] - Alex_Restaurant</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Alex_Restaurant.styles.css" asp-append-version="true" />
+
 </head>
 <body>
 
 
-    <div class="container2">
+    <div class="container">
         <header>
             <img class="logo" src="/images/logo-transparent-png.png" alt="Logo for alex Restaurant">
         </header>
@@ -23,14 +23,18 @@
         </nav>
         <div>
             @RenderBody()
+
         </div>
 
-
-        <footer>
+        <footer class="position-absolute bottom-0 end-0">
             <p>5444 Rue Jean-Talon E, Saint-Léonard, QC H1S 1L6 - Copyright 2023©</p>
         </footer>
 
+
+
     </div>
+
+
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
